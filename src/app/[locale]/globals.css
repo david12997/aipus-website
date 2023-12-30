@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    overflow-x: hidden;
+    background: #f8f8f8;
+  
+}
+
+
+/* scroll bar styles */
+*::-webkit-scrollbar {
+    width: 10px; 
+    height:10px;              /* width of the entire scrollbar */
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #b0b0b05e;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid transparent;  /* creates padding around scroll thumb */
+  }
+
+.my-linear-gradient{
+    background: linear-gradient(160deg, #1d0067 10%, #6f37ff 60%, #4400f2 90%);
+}
+  
+
+
+
+.my-linear-gradient-2{
+  background: linear-gradient(160deg, #190059 10%, #4912d5 60%, #2e00a4 90%);
+}
