@@ -15,7 +15,7 @@ const SectionNav = ():JSX.Element => {
                 <div className="logo flex items-center w-[50px] h-[50px]">
                     <Image 
                         src="https://cms.aipus.co/aipus/assets/rxll78sakisw0koc" 
-                        alt="Logo" 
+                        alt="Logo Aipus" 
                         width={45} 
                         height={45} 
                     />
@@ -39,13 +39,13 @@ const SectionNav = ():JSX.Element => {
                 
                 <div className="container-button hidden md:block mr-4">
                     <Button2
-                        text="Crear Proyecto"
+                        text="Cotizar Proyecto"
                         width="200px"
                         height="45px"
                         color="#ffffff"
                         background="#ee0100"
                         fontSize="20px"
-                        link="/crear-proyecto"
+                        link="https://aipus.fillout.com/cotizar-proyecto?type=Proyecto%20a%20la%20medida"
                     />
                 </div>
                <MenuHamburger/>

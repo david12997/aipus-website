@@ -9,7 +9,7 @@ const SectionIndexPortafolio = ():JSX.Element => {
     return<section className="w-[100%] my-linear-gradient">
         <section className="flex flex-wrap w-[100%] 2xl:w-[80%] 2xl:ml-[9%]  pt-[90px] relative ">
                 <div className="container-text w-[100%] md:w-[45%] p-4 md:p-14">
-                    <h1 className="md:text-[48px] text-[30px] font-bold uppercase text-white mt-[-20px] mb-16">
+                    <h1 className="md:text-[48px] text-[42px] 2xl:text-[56px] font-bold uppercase text-white mt-[-20px] mb-16">
                         Desarrollamos productos y 
                         servicios digitales 
                         para su

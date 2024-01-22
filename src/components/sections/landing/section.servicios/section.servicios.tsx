@@ -1,21 +1,26 @@
+'use client'
+
 import CardServices1 from "@/components/cards/card.services.1/card.services.1";
+import useDragScroll from "@/hooks/use.drag.scroll";
 import Image from "next/image";
 
 const SectionServicios = ():JSX.Element => {
 
+    const scrollDesktop1 = useDragScroll({multiplier:1});
+    const scrollDesktop2 = useDragScroll({multiplier:1});
+
+
     return<>
-        <section className="servicios w-screen h-screen min-h-[860px] max-h-[900px] md:min-h-[650px] md:max-h-[930px]">
+        <section className="servicios w-screen h-screen min-h-[860px] max-h-[900px] md:min-h-[650px] md:max-h-[930px] cursor-pointer">
 
             <div className="relative mobile block md:hidden w-[100%] h-[100%]">
 
                 <div className="flex overflow-y-scroll z-[9] p-2 absolute container-cards-services w-[95%] ml-[2%] h-[260px] top-[250px]">
-                    <CardServices1 
-                        img="https://cms.aipus.co/aipus/assets/3brwycv8ywmc8owk"
-                        name="Infraestructura Cloud - Servidores VPS"
-                    />
+                   
                     <CardServices1 
                         img="https://cms.aipus.co/aipus/assets/lyp0iy118w0wggsw"
                         name="Tiendas online y plataformas de comercio electrónico"
+                        link="/soluciones/ecommerce"
                     />
                     <CardServices1 
                         img="https://cms.aipus.co/aipus/assets/9ws915ph6ego8gkk"
@@ -24,6 +29,10 @@ const SectionServicios = ():JSX.Element => {
                     <CardServices1 
                         img="https://cms.aipus.co/aipus/assets/jv0z6wn8mxc8c8gc" 
                         name="Contrata equipos de desarrollo a medida - remotos"
+                    />
+                     <CardServices1 
+                        img="https://cms.aipus.co/aipus/assets/3brwycv8ywmc8owk"
+                        name="Infraestructura Cloud - Servidores VPS"
                     />
                     <CardServices1 
                         img="https://cms.aipus.co/aipus/assets/lo6naipa4qo0w8o8"
@@ -44,10 +53,7 @@ const SectionServicios = ():JSX.Element => {
                         img="https://cms.aipus.co/aipus/assets/7zt3avaybhgkgwos"
                         name="Desarrollo de apps móviles - Android - IOS"
                     />
-                    <CardServices1 
-                        img="https://cms.aipus.co/aipus/assets/axovu577hq80444s"
-                        name="LLM's - Inteligencia artificial y Machine Learning"
-                    />
+                   
 
                     <CardServices1 
                         img="https://cms.aipus.co/aipus/assets/6sfhge6q89444084"
@@ -57,6 +63,10 @@ const SectionServicios = ():JSX.Element => {
                     <CardServices1 
                         img="https://cms.aipus.co/aipus/assets/bhwm4tibq8g80ggw"
                         name="Diseño UX/UI y prototipados interactivos de alta fidelidad"
+                    />
+                     <CardServices1 
+                        img="https://cms.aipus.co/aipus/assets/axovu577hq80444s"
+                        name="LLM's - Inteligencia artificial y Machine Learning"
                     />
                     <CardServices1 
                         img="https://cms.aipus.co/aipus/assets/kjnqyx10bvkgkg80"
@@ -89,15 +99,18 @@ const SectionServicios = ():JSX.Element => {
 
             <div className="relative desktop hidden md:flex w-[100%] h-[100%]">
 
-                <div className="flex overflow-y-scroll z-[9] p-2 absolute container-cards-services w-[95%] ml-[2%] h-[260px] top-[110px] 2xl:h-[400px]">
+                <div ref={scrollDesktop1.externalRef} 
+                    onMouseDown={scrollDesktop1.startDragging}
+                    onMouseUp={scrollDesktop1.stopDragging}
+                    onMouseLeave={scrollDesktop1.stopDragging}
+                    onMouseMove={scrollDesktop1.onDrag}
+                    className="flex overflow-y-scroll z-[9] p-2 absolute container-cards-services w-[95%] ml-[2%] h-[260px] top-[110px] 2xl:h-[400px]">
                     
-                    <CardServices1 
-                        img="https://cms.aipus.co/aipus/assets/3brwycv8ywmc8owk"
-                        name="Infraestructura Cloud - Servidores VPS"
-                    />
+                   
                     <CardServices1 
                         img="https://cms.aipus.co/aipus/assets/lyp0iy118w0wggsw"
                         name="Tiendas online y plataformas de comercio electrónico"
+                        link="/soluciones/ecommerce"
                     />
                     <CardServices1 
                         img="https://cms.aipus.co/aipus/assets/9ws915ph6ego8gkk"
@@ -111,6 +124,10 @@ const SectionServicios = ():JSX.Element => {
                         img="https://cms.aipus.co/aipus/assets/lo6naipa4qo0w8o8"
                         name="Plataformas POS - CMS - LMS - CRM"
                     />
+                     <CardServices1 
+                        img="https://cms.aipus.co/aipus/assets/3brwycv8ywmc8owk"
+                        name="Infraestructura Cloud - Servidores VPS"
+                    />
                     <CardServices1 
                         img="https://cms.aipus.co/aipus/assets/cdw9z4phuagccgks"
                         name="Marketing Publicidad digital - SEO - SEM - SMM"
@@ -120,11 +137,13 @@ const SectionServicios = ():JSX.Element => {
                     
 
                 </div>
-                <div className="flex overflow-y-scroll z-[9] p-2 absolute container-cards-services w-[95%] ml-[2%] h-[260px] 2xl:top-[530px] top-[410px] 2xl:h-[400px]">
-                    <CardServices1 
-                        img="https://cms.aipus.co/aipus/assets/axovu577hq80444s"
-                        name="LLM's - Inteligencia artificial y Machine Learning"
-                    />
+                <div ref={scrollDesktop2.externalRef} 
+                    onMouseDown={scrollDesktop2.startDragging}
+                    onMouseUp={scrollDesktop2.stopDragging}
+                    onMouseLeave={scrollDesktop2.stopDragging}
+                    onMouseMove={scrollDesktop2.onDrag}
+                    className="flex overflow-y-scroll z-[9] p-2 absolute container-cards-services w-[95%] ml-[2%] h-[260px] 2xl:top-[530px] top-[410px] 2xl:h-[400px]">
+                   
                     <CardServices1 
                         img="https://cms.aipus.co/aipus/assets/7zt3avaybhgkgwos"
                         name="Desarrollo de apps móviles - Android - IOS"
@@ -138,6 +157,10 @@ const SectionServicios = ():JSX.Element => {
                     <CardServices1 
                         img="https://cms.aipus.co/aipus/assets/bhwm4tibq8g80ggw"
                         name="Diseño UX/UI y prototipados interactivos de alta fidelidad"
+                    />
+                     <CardServices1 
+                        img="https://cms.aipus.co/aipus/assets/axovu577hq80444s"
+                        name="LLM's - Inteligencia artificial y Machine Learning"
                     />
                     <CardServices1 
                         img="https://cms.aipus.co/aipus/assets/kjnqyx10bvkgkg80"

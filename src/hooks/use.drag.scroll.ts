@@ -1,16 +1,16 @@
 
-import { useState, useCallback } from 'react';
-import { RefObject } from 'react';
+import { useState, useCallback, useRef } from 'react';
+
 
 interface UseDragScrollProps {
-  externalRef: RefObject<HTMLDivElement>;
   multiplier?: number;
 }
 
-const useDragScroll = ({ externalRef, multiplier = 3 }: UseDragScrollProps) => {
+const useDragScroll = ({  multiplier = 3 }: UseDragScrollProps) => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const externalRef = useRef<HTMLDivElement>(null);
 
   const startDragging = useCallback((e: React.MouseEvent) => {
     setIsDragging(true);
@@ -36,7 +36,8 @@ const useDragScroll = ({ externalRef, multiplier = 3 }: UseDragScrollProps) => {
     isDragging,
     startDragging,
     stopDragging,
-    onDrag
+    onDrag,
+    externalRef,
   };
 };
 

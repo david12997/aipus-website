@@ -1,4 +1,5 @@
-import Image from "next/image"
+'use client'
+import  { useEffect, useState, useRef } from 'react';
 import Work1 from "./components/work.1";
 import Work2 from "./components/work.2";
 import Work3 from "./components/work.3";
@@ -8,13 +9,48 @@ import Work5 from "./components/work5";
 
 const SectionWork = ():JSX.Element => {
 
-    return<>
+    const [isVisible, setIsVisible] = useState(false);
+    const sectionRef = useRef<HTMLSpanElement | null>(null);
 
-        <Work1/>
-        <Work2/>
-        <Work3/>
-        <Work4/>
-        <Work5/>
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+          // entries[0] es el primer (y único) elemento observado
+          if (entries[0].isIntersecting) {
+            setIsVisible(true);
+          } else {
+            setIsVisible(false);
+          }
+        });
+    
+        if (sectionRef.current) {
+          observer.observe(sectionRef.current);
+        }
+    
+        // Limpiar el observer cuando el componente se desmonte
+        return () => {
+          if (sectionRef.current) {
+            observer.unobserve(sectionRef.current);
+          }
+        };
+      }, []);
+
+    return<>
+        <span ref={sectionRef}>
+            <Work1/>
+            <Work2/>
+            <Work3/>
+            <Work4/>
+            <Work5/>
+        </span>
+        
+        {isVisible && (
+            <div className=" z-[9] container-btn-create w-screen h-[70px] fixed bottom-[30px] flex  items-center justify-center md:hidden">
+                <button className=" shadow-[0px_0px_16px_rgba(0,0,0,1)] rounded-[9px] w-[90%] h-[60px] bg-[#e20000] text-white text-[20px] font-bold">
+                    Crear Proyecto Similar
+                </button>
+            </div>
+        )}
+            
 
 
     </>

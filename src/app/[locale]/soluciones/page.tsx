@@ -29,10 +29,9 @@ export default function Soluciones({params: {locale}}: {params: {locale: string}
   return<>
     <SectionNav/>
     <SectionInicioSoluciones/>
-    <SectionInfo/>
     <SectionCategorias/>
+    <SectionInfo/>
     <SectionHowWork/>
-    
     <SectionFooter/>
 
   </>

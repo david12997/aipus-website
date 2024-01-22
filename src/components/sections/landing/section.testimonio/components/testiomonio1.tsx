@@ -16,7 +16,7 @@ const Testimonio1 = ():JSX.Element => {
                     
                 />
 
-                <div className="w-[90%] ml-[5%] flex items-center p-2 bg-[#ee0100] text-[32px] font-bold relative h-[100px] rounded-[6px]">
+                <div className="w-[90%] ml-[5%] flex items-center p-2 bg-[#ee0100] text-[32px] font-bold relative  rounded-[6px]">
                     <h1 className="text-white">¿QUE DICEN SOBRE NOSOTROS?</h1>
                 </div>
 
