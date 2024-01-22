@@ -11,7 +11,7 @@ const SectionIndex = ():JSX.Element => {
             <div className="relative container-mobile block md:hidden w-[100%] h-[100%]">
                 <Image
                     src="https://cms.aipus.co/aipus/assets/9c873jul2twcko48" 
-                    alt="Logo" 
+                    alt="fondo pantalla" 
                     priority={true}
                     quality={100}
                     fill={true}
@@ -26,11 +26,11 @@ const SectionIndex = ():JSX.Element => {
 
                 <TextsIndex screen="mobile"/>
 
-                <div className="absolute top-[98%]  container-button w-[100%] flex justify-end">
+                <div className="absolute top-[98%]  container-button w-[100%] flex justify-center md:justify-end">
                     <Button1
                         text="Crear Proyecto"
                         icon={<IconEnterProject width="30" height="30" fill="#ffffff" />}
-                        width="300px"
+                        width="290px"
                         height="60px"
                         color="white"
                         background="#E20000"
@@ -70,7 +70,7 @@ const SectionIndex = ():JSX.Element => {
                     />
                     <TextsIndex screen="desktop"/>
 
-                    <div className="absolute top-[85%]  container-button w-[90%] flex justify-end ml-[9%]">
+                    <div className="absolute top-[85%]  container-button w-[90%] flex justify-center md:justify-end ml-[9%]">
                         <Button1
                             text="Crear Proyecto"
                             icon={<IconEnterProject width="30" height="30" fill="#ffffff" />}
@@ -79,6 +79,7 @@ const SectionIndex = ():JSX.Element => {
                             color="white"
                             background="#E20000"
                             fontSize="22px"
+                            
                         />
                     </div>
 

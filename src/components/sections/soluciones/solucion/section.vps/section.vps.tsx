@@ -6,31 +6,27 @@ import CardVps from "@/components/cards/card.vps/card.vps"
 import useDragScroll from "@/hooks/use.drag.scroll";
 import useScrollToCard from "@/hooks/use.scrolltocard";
 import Image from "next/image";
-import { useRef } from "react";
 
 
 const SectionVPS = ():JSX.Element => {
 
-    const cardsCkeck1Ref = useRef<HTMLDivElement>(null);
-    const cardsCkeck2Ref = useRef<HTMLDivElement>(null);
-
-    const scrollContainerRef = useRef<HTMLDivElement>(null);
     const numCards = 4;
 
     const {
         isDragging,
         startDragging,
         stopDragging,
-        onDrag
-    } = useDragScroll({ externalRef: scrollContainerRef, multiplier: 3 });
+        onDrag,
+        externalRef
+    } = useDragScroll({ multiplier: 3 });
 
     const {
         activeIndex,
         scrollToCard
-    } = useScrollToCard({ numCards, externalRef: scrollContainerRef });
+    } = useScrollToCard({ numCards, externalRef: externalRef });
 
-    const DragScrollChecks1 = useDragScroll({ externalRef: cardsCkeck1Ref, multiplier: 3 });
-    const DragScrollChecks2 = useDragScroll({ externalRef: cardsCkeck2Ref, multiplier: 3 });
+    const DragScrollChecks1 = useDragScroll({  multiplier: 3 });
+    const DragScrollChecks2 = useDragScroll({  multiplier: 3 });
 
 
     return<>
@@ -40,7 +36,7 @@ const SectionVPS = ():JSX.Element => {
             <div className="section1 w-[100%] mt-[50px] mb-[20px] flex justify-around flex-wrap">
 
                 <div className="container-1-vps w-[100%] md:w-[50%]">
-                    <h1 className="uppercase font-extrabold text-[28px] md:text-[40px] text-black">Servidores de Aplicaciones y Servicios Cloud</h1>
+                    <h1 className="uppercase font-extrabold text-[36px] md:text-[45px] text-black">Servidores de Aplicaciones y Servicios Cloud</h1>
                     <h6 className="desc text-[19px] md:text-[21px] font-bold text-[#e20000] relative ">Despliegue aplicaciones que requieren recursos privados y escalables</h6>
                     <div className="container-mi-img w-[100%] mt-4 mb-4 block md:hidden">
                         <Image
@@ -97,7 +93,7 @@ const SectionVPS = ():JSX.Element => {
 
 
 
-            <div className="section2 w-[100%] mt-[60px] md:mt-[90px] mb-[20px] flex justify-around flex-wrap">
+           {/* <div className="section2 w-[100%] mt-[60px] md:mt-[90px] mb-[20px] flex justify-around flex-wrap">
                 <div className="containers2-1 md:block hidden md:w-[50%]">
                     <Image
                         src="https://cms.aipus.co/aipus/assets/tqepb3icidwscs44"
@@ -125,6 +121,7 @@ const SectionVPS = ():JSX.Element => {
                     </h6>
                 </div>
             </div>
+            */}
 
             <div className="section3 w-[100%] mt-[60px] md:mt-[90px] mb-[20px] flex justify-around flex-wrap">
               
@@ -170,7 +167,7 @@ const SectionVPS = ():JSX.Element => {
                  y simplificar la construccion de API's
                 </h6>
 
-                <div ref={cardsCkeck1Ref} 
+                <div ref={DragScrollChecks1.externalRef} 
                     onMouseDown={DragScrollChecks1.startDragging} 
                     onMouseMove={DragScrollChecks1.onDrag}
                     onMouseUp={DragScrollChecks1.stopDragging}   
@@ -192,7 +189,7 @@ const SectionVPS = ():JSX.Element => {
                         icon="https://cms.aipus.co/aipus/assets/p2ohk8mv6rk0g40s"
                     />
                 </div>
-                <div ref={cardsCkeck2Ref} 
+                <div ref={DragScrollChecks2.externalRef} 
                     onMouseDown={DragScrollChecks2.startDragging} 
                     onMouseMove={DragScrollChecks2.onDrag}
                     onMouseUp={DragScrollChecks2.stopDragging}  
@@ -237,7 +234,7 @@ const SectionVPS = ():JSX.Element => {
                 </div>
             </div>
 
-            <div  ref={scrollContainerRef} onMouseDown={startDragging} onMouseUp={stopDragging} onMouseMove={onDrag} 
+            <div  ref={externalRef} onMouseDown={startDragging} onMouseUp={stopDragging} onMouseMove={onDrag} 
                 className={`flex overflow-auto container-cards w-[100%] mt-8  ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}>
 
                 <CardVps

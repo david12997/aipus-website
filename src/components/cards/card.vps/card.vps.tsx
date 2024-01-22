@@ -20,7 +20,7 @@ type CardVpsProps = {
 const CardVps = (props:CardVpsProps):JSX.Element =>{
 
     return<>
-        <div className="card-planes min-w-[320px] w-[330px] min-h-[600px] bg-white rounded-[9px] shadow-[0px_0px_6px_rgba(0,0,0,0.2)] m-4">
+        <div className="card-planes min-w-[320px] w-[330px] min-h-[600px] bg-white rounded-[9px] shadow-[0px_0px_6px_rgba(0,0,0,0.2)] m-4 md:m-10">
 
             <div className={`${!props.discont && 'invisible' } promo bg-[#e20000] w-[100%] h-[40px] p-2  rounded-t-[9px] flex items-center justify-center`}>
                 <h3 className="text-white font-extrabold text-[18px]">MÁS VENDIDO</h3>

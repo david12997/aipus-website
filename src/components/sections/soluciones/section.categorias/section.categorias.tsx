@@ -1,37 +1,33 @@
 'use client'
 
 import CardCategory1 from "@/components/cards/card.category.1/card.category.1";
+import useDragScroll from "@/hooks/use.drag.scroll";
 
 const SectionCategorias = ():JSX.Element => {
+
+    const scrollSolutions1 = useDragScroll({multiplier:1});
+    const scrollSolutions2 = useDragScroll({multiplier:1});
 
     return<>
         <section className="w-[100%] pt-[40px] relative 2xl:w-[90%] 2xl:ml-[5%]">
             <h1 className="w-[90%] ml-[5%] h-50px] text-[36px] md:text-[45px] text-black font-extrabold" >NUESTRAS SOLUCIONES</h1>
             
 
-            <div className="container-categorias w-[90%] ml-[5%] mt-1 mb-1 flex  overflow-x-scroll">
-                <CardCategory1 
-                    img="https://cms.aipus.co/aipus/assets/3brwycv8ywmc8owk"
-                    alt="Imagen"
-                    width={160}
-                    height={160}
-                    title="Servicios Cloud - Servidores VPS"
-                    description={<div className="p-2 overflow-y-scroll max-h-[160px]">
-                        <li>Servidores de apps VPS </li>
-                        <li>Infraestructura de Servidores </li>
-                        <li>Amazon Web Services</li>
-                        <li>Google Cloud Platform</li>
-                        <li>Azure</li>
-                        
-                    </div>}
-                    link="/soluciones/servidores-apps"
-                />
+            <div ref={scrollSolutions1.externalRef} 
+                onMouseDown={scrollSolutions1.startDragging}
+                onMouseUp={scrollSolutions1.stopDragging}
+                onMouseLeave={scrollSolutions1.stopDragging}
+                onMouseMove={scrollSolutions1.onDrag}
+
+                className="container-categorias w-[90%] ml-[5%] mt-1 mb-1 flex  overflow-x-scroll">
+                
                 <CardCategory1 
                     img="https://cms.aipus.co/aipus/assets/lyp0iy118w0wggsw"
                     alt="Imagen"
                     width={160}
                     height={160}
                     title="Comercio Electronico - eCommerce"
+                    link="/soluciones/ecommerce"
                     description={<div className="p-2 overflow-y-scroll max-h-[160px]">
                         <li>Tiendas online</li>
                         <li>Landing de ventas</li>
@@ -99,29 +95,34 @@ const SectionCategorias = ():JSX.Element => {
                     
                     }
                 />
+                <CardCategory1 
+                    img="https://cms.aipus.co/aipus/assets/3brwycv8ywmc8owk"
+                    alt="Imagen"
+                    width={160}
+                    height={160}
+                    title="Servicios Cloud - Servidores VPS"
+                    description={<div className="p-2 overflow-y-scroll max-h-[160px]">
+                        <li>Servidores de apps VPS </li>
+                        <li>Infraestructura de Servidores </li>
+                        <li>Amazon Web Services</li>
+                        <li>Google Cloud Platform</li>
+                        <li>Azure</li>
+                        
+                    </div>}
+                    link="/soluciones/servidores-apps"
+                />
                 
 
             </div>
 
-            <div className="container-categorias w-[90%] ml-[5%] mt-1 mb-1 flex  overflow-x-scroll">
+            <div ref={scrollSolutions2.externalRef}
+                onMouseDown={scrollSolutions2.startDragging}
+                onMouseUp={scrollSolutions2.stopDragging}
+                onMouseLeave={scrollSolutions2.stopDragging}
+                onMouseMove={scrollSolutions2.onDrag}
+                className="container-categorias w-[90%] ml-[5%] mt-1 mb-1 flex  overflow-x-scroll">
         
-                <CardCategory1 
-                    img="https://cms.aipus.co/aipus/assets/jv0z6wn8mxc8c8gc"
-                    alt="Imagen"
-                    width={160}
-                    height={160}
-                    title="Equipos de Desarrollo"
-                    description={
-                        <div className="p-2 overflow-y-scroll max-h-[160px]">
-                            <li>Equipos de desarrollo IT</li>
-                            <li>Equipos de diseño</li>
-                            <li>Equipos de soporte IT</li>
-                            <li>Equipos de ventas IT</li>
-                        </div>
-                    
-                    
-                    }
-                />
+                
                 <CardCategory1 
                     img="https://cms.aipus.co/aipus/assets/lo6naipa4qo0w8o8"
                     alt="Imagen"
@@ -175,6 +176,23 @@ const SectionCategorias = ():JSX.Element => {
                             <li>Diseño de logotipos</li>
                         </div>
                     
+                    
+                    
+                    }
+                />
+                <CardCategory1 
+                    img="https://cms.aipus.co/aipus/assets/jv0z6wn8mxc8c8gc"
+                    alt="Imagen"
+                    width={160}
+                    height={160}
+                    title="Equipos de Desarrollo"
+                    description={
+                        <div className="p-2 overflow-y-scroll max-h-[160px]">
+                            <li>Equipos de desarrollo IT</li>
+                            <li>Equipos de diseño</li>
+                            <li>Equipos de soporte IT</li>
+                            <li>Equipos de ventas IT</li>
+                        </div>
                     
                     
                     }

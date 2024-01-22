@@ -80,7 +80,7 @@ const ScreenMenu = (props:PropsScreenMenu):JSX.Element => {
                         color="#ffffff"
                         background="#4100E6"
                         fontSize="22px"
-                        link="/crear-proyecto"
+                        link="https://aipus.fillout.com/cotizar-proyecto?type=Proyecto%20a%20la%20medida"
                     />
                 </div>
 

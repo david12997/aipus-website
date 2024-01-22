@@ -17,7 +17,7 @@ const Work1 = ():JSX.Element => {
                     <h1 className="text-[30px] text-white  font-extrabold">NUESTRO TRABAJO</h1>
                 </div>
 
-                <div className="text-nuestro-trabajo mt-[40px] flex items-center justify-end w-[90%] ml-[5%]  z-[99] relative">
+                <div className="text-nuestro-trabajo mt-[40px] flex items-center justify-end w-[90%] ml-[5%]   relative">
                     <ul className="text-right w-[50%]">
                         <li className="text-right text-[18px] font-semibold text-white">Un pequeño vistazo a nuestros diseños y proyectos</li>
                     </ul>
