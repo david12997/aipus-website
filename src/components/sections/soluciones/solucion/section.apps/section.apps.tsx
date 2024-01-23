@@ -1,0 +1,181 @@
+'use client'
+
+import CardSolutions from "@/components/cards/card.solution/card.solution"
+import useDragScroll from "@/hooks/use.drag.scroll";
+import useScrollToCard from "@/hooks/use.scrolltocard";
+
+
+const SolutionApps = ():JSX.Element => {
+
+    const scrollDesktop1 = useDragScroll({multiplier:1});
+    const scorllToCard = useScrollToCard({numCards:5,externalRef:scrollDesktop1.externalRef});
+
+
+    return<>
+          <span>
+           
+          <section className='section-inicio w-[96%] ml-[2%] 2xl:w-[80%] 2xl:ml-[10%]  mt-[50px]'>
+          <div className="title text-[36px] md:text-[45px] text-black p-2 md:p-4 font-extrabold">
+          SOLUCIONES APPS MOVILES
+          </div>
+
+         
+            
+            <div className="circles w-[96%] ml-[2%] block md:hidden">
+                <div className="flex justify-center space-x-4 mb-4">
+                    {Array.from({ length: 5 }).map((_, index) => (
+                        <button 
+                            key={index} 
+                            className={`w-8 h-8 rounded-full ${index === scorllToCard.activeIndex ? 'bg-[#e20000]' : 'bg-[#4200e8]'}`} 
+                            onClick={() => scorllToCard.scrollToCard(index)} 
+                        />
+                    ))}
+                </div>
+            </div>
+
+            <div ref={scrollDesktop1.externalRef} 
+              onMouseDown={scrollDesktop1.startDragging}
+              onMouseUp={scrollDesktop1.stopDragging}
+              onMouseLeave={scrollDesktop1.stopDragging}
+              onMouseMove={scrollDesktop1.onDrag}  
+              className="container-soluciones flex w-[100%] overflow-x-scroll">
+                <CardSolutions
+                name='Apps Nativas'
+                price='$ 9.000.000 COP'
+                color='#4301E9'
+                discont={false}
+                typePayment="Desde"
+                detalles={[
+                <li className='text-[#6e6e6e] m-2 mt-6'>Hosting y dominio <strong >gratis primer año</strong> desde segundo año 350.000 COP/anual</li>,
+                <li className='text-[#6e6e6e] m-2 mt-4'><strong >1 Pagnia web</strong> optimida para ventas</li>,
+                <li className='text-[#6e6e6e] m-2 mt-4'>Pasarela de pagos <strong >Integrada</strong></li>,
+                <li className='text-[#6e6e6e] m-2 mt-4'>Stock de <strong >100 productos</strong></li>,
+                <li className='text-[#6e6e6e] m-2 mt-4'>Diseño <strong >Personalizado</strong></li>,
+                <li className='text-[#6e6e6e] m-2 mt-4'>Pagina responsive <strong > y adaptable</strong></li>,
+                <li className='text-[#6e6e6e] m-2 mt-4'>Panel de administración <strong > de tu pagina</strong></li>,
+                <li className='text-[#6e6e6e] m-2 mt-4'>Manejas <strong >Productos - Pagos - Envios</strong></li>,
+                <li className='text-[#6e6e6e] m-2 mt-4'> <strong >50 GB</strong> de almacenamiento SSD</li>,
+                <li className='text-[#6e6e6e] m-2 mt-4'><strong >5 correos </strong> corporativos personalizados</li>,
+                <li className='text-[#6e6e6e] m-2 mt-4'>Optimización para <strong >SEO y Marketing</strong></li>,
+                <li className='text-[#6e6e6e] m-2 mt-4'>Certificado SSL<strong >ilimitado</strong></li>,
+                <li className='text-[#6e6e6e] m-2 mt-4'><strong >3</strong> Bases de datos</li>,
+                <li className='text-[#6e6e6e] m-2 mt-4'> <strong >1</strong> Dominio incluido</li>,
+                <li className='text-[#6e6e6e] m-2 mt-4'>Tiempo de entrega <strong >10 días</strong> habiles</li>,
+
+
+                ]}
+                />
+
+                <CardSolutions
+                    name='Apps Hibridas'
+                    price='$ 6.000.000 COP'
+                    color='#4301E9'
+                    discont={false}
+                    typePayment="Desde"
+                    detalles={[
+                    <li className='text-[#6e6e6e] m-2 mt-6'>Hosting y dominio <strong >gratis primer año</strong> desde segundo año 350.000 COP/anual</li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'><strong >1 Pagnia web</strong> optimida para ventas</li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Pasarela de pagos <strong >Integrada</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Stock de <strong >100 productos</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Diseño <strong >Personalizado</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Pagina responsive <strong > y adaptable</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Panel de administración <strong > de tu pagina</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Manejas <strong >Productos - Pagos - Envios</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'> <strong >50 GB</strong> de almacenamiento SSD</li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'><strong >5 correos </strong> corporativos personalizados</li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Optimización para <strong >SEO y Marketing</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Certificado SSL<strong >ilimitado</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'><strong >3</strong> Bases de datos</li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'> <strong >1</strong> Dominio incluido</li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Tiempo de entrega <strong >10 días</strong> habiles</li>,
+
+
+                    ]}
+                />
+
+                <CardSolutions
+                    name='App de Domicilios'
+                    price='$ 12.000.000 COP'
+                    color='#e20000'
+                    discont={true}
+                    detalles={[
+                    <li className='text-[#6e6e6e] m-2 mt-6'>Hosting y dominio <strong >gratis primer año</strong> desde segundo año 350.000 COP/anual</li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'><strong >1 Pagnia web</strong> optimida para ventas</li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Pasarela de pagos <strong >Integrada</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Stock de <strong >100 productos</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Diseño <strong >Personalizado</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Pagina responsive <strong > y adaptable</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Panel de administración <strong > de tu pagina</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Manejas <strong >Productos - Pagos - Envios</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'> <strong >50 GB</strong> de almacenamiento SSD</li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'><strong >5 correos </strong> corporativos personalizados</li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Optimización para <strong >SEO y Marketing</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Certificado SSL<strong >ilimitado</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'><strong >3</strong> Bases de datos</li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'> <strong >1</strong> Dominio incluido</li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Tiempo de entrega <strong >10 días</strong> habiles</li>,
+
+
+                    ]}
+                />
+
+                <CardSolutions
+                    name='App Marketplace ventas'
+                    price='$ 12.000.000 COP'
+                    color='#4301E9'
+                    discont={false}
+                    detalles={[
+                    <li className='text-[#6e6e6e] m-2 mt-6'>Hosting y dominio <strong >gratis primer año</strong> desde segundo año 350.000 COP/anual</li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'><strong >1 Pagnia web</strong> optimida para ventas</li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Pasarela de pagos <strong >Integrada</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Stock de <strong >100 productos</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Diseño <strong >Personalizado</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Pagina responsive <strong > y adaptable</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Panel de administración <strong > de tu pagina</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Manejas <strong >Productos - Pagos - Envios</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'> <strong >50 GB</strong> de almacenamiento SSD</li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'><strong >5 correos </strong> corporativos personalizados</li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Optimización para <strong >SEO y Marketing</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Certificado SSL<strong >ilimitado</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'><strong >3</strong> Bases de datos</li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'> <strong >1</strong> Dominio incluido</li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Tiempo de entrega <strong >10 días</strong> habiles</li>,
+
+
+                    ]}
+                />
+                <CardSolutions
+                    name='Apps a la medidad'
+                    price='Consultar precio'
+                    color='#4301E9'
+                    discont={false}
+                    detalles={[
+                    <li className='text-[#6e6e6e] m-2 mt-6'>Hosting y dominio <strong >gratis primer año</strong> desde segundo año 350.000 COP/anual</li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'><strong >1 Pagnia web</strong> optimida para ventas</li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Pasarela de pagos <strong >Integrada</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Stock de <strong >100 productos</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Diseño <strong >Personalizado</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Pagina responsive <strong > y adaptable</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Panel de administración <strong > de tu pagina</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Manejas <strong >Productos - Pagos - Envios</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'> <strong >50 GB</strong> de almacenamiento SSD</li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'><strong >5 correos </strong> corporativos personalizados</li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Optimización para <strong >SEO y Marketing</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Certificado SSL<strong >ilimitado</strong></li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'><strong >3</strong> Bases de datos</li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'> <strong >1</strong> Dominio incluido</li>,
+                    <li className='text-[#6e6e6e] m-2 mt-4'>Tiempo de entrega <strong >10 días</strong> habiles</li>,
+
+
+                    ]}
+                />
+
+
+            </div>
+
+        </section>
+      </span>
+    </>
+}
+
+export default SolutionApps

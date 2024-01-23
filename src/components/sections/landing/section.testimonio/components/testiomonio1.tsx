@@ -39,8 +39,9 @@ const Testimonio1 = ():JSX.Element => {
                         height="54px"
                         background="#ee0100"
                         color="#fff"
-                        text="Asesoría gratuita"
+                        text="Cotizar proyecto"
                         fontSize="19px"
+                        link="https://aipus.fillout.com/cotizar-proyecto?type=Proyecto%20a%20la%20medida"
 
 
                     />
@@ -92,8 +93,9 @@ const Testimonio1 = ():JSX.Element => {
                             height="64px"
                             background="#ee0100"
                             color="#fff"
-                            text="Asesoría gratuita"
+                            text="Cotizar proyecto"
                             fontSize="20px"
+                            link="https://aipus.fillout.com/cotizar-proyecto?type=Proyecto%20a%20la%20medida"
 
 
                         />

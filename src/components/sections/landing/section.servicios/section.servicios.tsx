@@ -25,6 +25,7 @@ const SectionServicios = ():JSX.Element => {
                     <CardServices1 
                         img="https://cms.aipus.co/aipus/assets/9ws915ph6ego8gkk"
                         name="Sitios web y Landing pages"
+                        link="/soluciones/websites"
                     />
                     <CardServices1 
                         img="https://cms.aipus.co/aipus/assets/jv0z6wn8mxc8c8gc" 
@@ -52,6 +53,7 @@ const SectionServicios = ():JSX.Element => {
                     <CardServices1 
                         img="https://cms.aipus.co/aipus/assets/7zt3avaybhgkgwos"
                         name="Desarrollo de apps móviles - Android - IOS"
+                        link="/soluciones/apps"
                     />
                    
 
@@ -115,6 +117,7 @@ const SectionServicios = ():JSX.Element => {
                     <CardServices1 
                         img="https://cms.aipus.co/aipus/assets/9ws915ph6ego8gkk"
                         name="Sitios web y Landing pages"
+                        link="/soluciones/websites"
                     />
                     <CardServices1 
                         img="https://cms.aipus.co/aipus/assets/jv0z6wn8mxc8c8gc" 
@@ -147,6 +150,7 @@ const SectionServicios = ():JSX.Element => {
                     <CardServices1 
                         img="https://cms.aipus.co/aipus/assets/7zt3avaybhgkgwos"
                         name="Desarrollo de apps móviles - Android - IOS"
+                        link="/soluciones/apps"
                     />
 
                     <CardServices1 

@@ -7,7 +7,7 @@ import myDynamic  from 'next/dynamic'
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.glowingphoenix.co'),
+  metadataBase: new URL('https://www.aipus.co'),
   title: 'AIPUS - Desarrollo de apps, sitios web, software y sistemas a la medidad',
   description: 'Creación apps, plataformas, productos y servicios digitales - Diseño UX/UI Consultoria de proyectos tecnológicos',
   keywords: 'diseño web, desarrollo de apps, desarrollo de paginas web, desarrollo de apps de envios, desarrollo de software, diseño ui, diseño grafirco',

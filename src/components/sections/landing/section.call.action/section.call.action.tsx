@@ -1,4 +1,5 @@
-import Image from "next/image";
+
+import Link from "next/link";
 import CardCalendar from "./components/card.calendar";
 
 const SectionCallToAction = ():JSX.Element => {
@@ -29,9 +30,9 @@ const SectionCallToAction = ():JSX.Element => {
             </div>
 
             <div className="container-button w-screen h-[70px] flex items-center justify-center relative mt-[330px] md:mt-0">
-                <button className="w-[300px] h-[70px] bg-[#d90100] text-white text-[22px] font-bold rounded-[6px]">
+                <Link href={'https://aipus.fillout.com/cotizar-proyecto?type=Proyecto%20a%20la%20medida'} className="flex items-center justify-center w-[300px] h-[70px] bg-[#d90100] text-white text-[22px] font-bold rounded-[6px]">
                    3, 2, 1 CREAR PROYECTO
-                </button>
+                </Link>
             </div>
 
         </section>

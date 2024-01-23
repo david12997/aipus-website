@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 
 const SectionCallCorreo = ():JSX.Element => {
@@ -47,9 +48,9 @@ const SectionCallCorreo = ():JSX.Element => {
                 <div className=" form-crear relative w-[60%] ml-[20%] mt-[100px]  h-[80px] border border-white flex items-center p-2 bg-white justify-center rounded-[9px]">
                     
                     <input className="w-[65%] h-[100%] bg-white text-black text-[26px] font-bold" type="text" placeholder=" Ingresa tu correo electronico"/>
-                    <button className="w-[35%] h-[100%] bg-[#d90100] text-white text-[22px] font-bold rounded-[6px]">
+                    <Link href={'https://aipus.fillout.com/cotizar-proyecto?type=Proyecto%20a%20la%20medida'} className="flex items-center justify-center w-[35%] h-[100%] bg-[#d90100] text-white text-[22px] font-bold rounded-[6px]">
                         CREAR PROYECTO
-                    </button>
+                    </Link>
                 
                 </div>  
 

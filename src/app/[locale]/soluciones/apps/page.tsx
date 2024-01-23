@@ -1,8 +1,7 @@
 import Button2 from '@/components/buttons/button.2/button2';
-import Button3 from '@/components/buttons/button.3/button.3';
 import CardSolutions from '@/components/cards/card.solution/card.solution';
 import NavigationBreadCumb from '@/components/sections/common/navigation/navigation';
-import SolutionEcommerce from '@/components/sections/soluciones/solucion/section.ecommerce/section.ecommerce';
+import SolutionApps from '@/components/sections/soluciones/solucion/section.apps/section.apps';
 import type { Metadata } from 'next'
 import myDynamic  from 'next/dynamic'
 import Image from 'next/image';
@@ -17,30 +16,31 @@ export const metadata: Metadata = {
   }
   
 
-export default function EcommercePage({params: {locale}}: {params: {locale: string}}) {
+export default function AppsPage({params: {locale}}: {params: {locale: string}}) {
 
     return<>
       <SectionNav/>
       <NavigationBreadCumb/>
       <>
         <section className='section-inicio w-[96%] ml-[2%] 2xl:w-[80%] 2xl:ml-[10%] flex justify-between relative flex-wrap  mt-[70px]'>
-          <div className="container-1 w-[100%] md:w-[45%] p-2 md:p-4">
-            <h1 className='text-[36px] md:text-[48px] font-extrabold text-black md:mt-8'>
-              CREACION DE TIENDAS ONLINE  BOT DE VENTAS Y MARKETPLACE
+          <div className="container-1 w-[100%] md:w-[48%] p-2 md:p-4">
+            <h1 className='text-[36px] md:text-[48px] font-extrabold text-black md:mt-2'>
+              DESARROLLO DE APPS MOVILES NATIVAS Y MULTIPLATAFORMA 
             </h1>
 
-            <div className="container-img block md:hidden">
+            <div className="container-img block md:hidden p-2">
               <Image
-                src="https://cms.aipus.co/aipus/assets/3eqou6rdii688gwo"
+                src="https://cms.aipus.co/aipus/assets/l2oyk71tvxssw0ck"
                 alt="Picture of the author"
-                width={600}
+                width={800}
                 height={600}
                 className='img-desktop'
               />
             </div>
 
             <h2 className='text-[18px] md:text-[20px] text-[#6e6e6e] font-semibold w-[100%] md:w-[63%] mt-2'>
-             Fortalezca su marca, venda en internet, <span className='text-[#4301E9]'>incremente sus ventas</span>  y expanda su negocio
+                Desarrolla tu propia aplicacion movil con todas las funcionalidades que necesitas para tu negocio.
+                Soluciona problemas reales y genera valor a tus clientes.
             </h2>
 
             <div className='container-button mt-4 md:mt-8 w-[100%] md:w-[50%]'>
@@ -56,12 +56,13 @@ export default function EcommercePage({params: {locale}}: {params: {locale: stri
 
            
           </div>
-          <div className="container-2  w-[100%] md:w-[44%] p-2 md:p-4 hidden md:flex mt-[-20px]">
+          <div className="container-2  w-[100%] md:w-[48%] p-2 md:p-8 hidden md:flex mt-[-20px] max-h-[490px]">
             <Image
-              src="https://cms.aipus.co/aipus/assets/3eqou6rdii688gwo"
+              src="https://cms.aipus.co/aipus/assets/l2oyk71tvxssw0ck"
               alt="Picture of the author"
-              width={900}
-              height={900}
+              width={1400}
+              height={1000}
+              className='object-contain'
             />
           </div>
         </section>
@@ -72,12 +73,12 @@ export default function EcommercePage({params: {locale}}: {params: {locale: stri
           
           <div className="container-1 w-[100%] md:w-[48%] p-2 md:p-4">
             <h1 className='text-[36px] md:text-[45px] font-extrabold text-black md:mt-8'>
-            PROYECTOS DE COMERCIO ELECTRONICO QUE  GENERAN CONVERSIONES
+                DESARROLLAMOS APPS FUNCIONALES, ATRACTIVAS Y DE ALTO RENDIMIENTO
             </h1>
 
-            <div className="container-img block md:hidden">
+            <div className="container-img block md:hidden p-4">
               <Image
-                src="https://cms.aipus.co/aipus/assets/4puiz83jct8gwkok"
+                src="https://cms.aipus.co/aipus/assets/mfd3m1sro7kck0so"
                 alt="Picture of the author"
                 width={700}
                 height={500}
@@ -86,9 +87,8 @@ export default function EcommercePage({params: {locale}}: {params: {locale: stri
             </div>
 
             <h2 className='text-[18px] md:text-[20px] text-[#6e6e6e] font-semibold w-[100%] md:w-[63%] mt-2'>
-              Ofrecemos soluciones innovadoras para crear tiendas online,
-              integrar bots de ventas inteligentes y establecer  marketplaces
-              líderes en el intercambio de productos y servicios.
+                Nos adaptamos a tus necesidades y te ayudamos a crear la mejor solución para tu negocio.
+
             </h2>
 
             <div className='container-button mt-4 md:mt-8 w-[100%] md:w-[50%]'>
@@ -104,9 +104,9 @@ export default function EcommercePage({params: {locale}}: {params: {locale: stri
 
            
           </div>
-          <div className="container-2  w-[100%] md:w-[40%] p-2 md:p-4 hidden md:block mt-[-20px]">
+          <div className="container-2  w-[100%] md:w-[39%] p-2 md:p-8 hidden md:block mt-[26px]">
             <Image
-              src="https://cms.aipus.co/aipus/assets/4puiz83jct8gwkok"
+              src="https://cms.aipus.co/aipus/assets/mfd3m1sro7kck0so"
               alt="Picture of the author"
               width={900}
               height={700}
@@ -115,7 +115,7 @@ export default function EcommercePage({params: {locale}}: {params: {locale: stri
         </section>
       </>
 
-      <SolutionEcommerce/>
-
+      <SolutionApps/>
+ 
     </>
   }

@@ -42,6 +42,7 @@ const SectionCategorias = ():JSX.Element => {
                     width={160}
                     height={160}
                     title="Websites y Landing Pages"
+                    link="/soluciones/websites"
                     description={<div className="p-2 overflow-y-scroll max-h-[160px]">
                         <li>Websites Informativas</li>
                         <li>Landing Pages</li>
@@ -56,6 +57,7 @@ const SectionCategorias = ():JSX.Element => {
                     width={160}
                     height={160}
                     title="Apps móviles   IOS-Android"
+                    link="/soluciones/apps"
                     description={<div className="p-2 overflow-y-scroll max-h-[160px]">
                         <li>Apps Nativas</li>
                         <li>Apps Hibridas</li>

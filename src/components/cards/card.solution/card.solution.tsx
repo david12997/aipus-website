@@ -10,6 +10,7 @@ type CardSolutionsProps = {
     price: string;
     color: string;
     detalles:JSX.Element[];
+    typePayment?:string;
     
 }
 
@@ -18,7 +19,7 @@ const CardSolutions = (props:CardSolutionsProps):JSX.Element =>{
     const router = useRouter();
 
     return<>
-        <div className="card-planes min-w-[320px] w-[330px] min-h-[600px] bg-white rounded-[9px] shadow-[0px_0px_6px_rgba(0,0,0,0.2)] m-4 md:m-10">
+        <div className="card-planes min-w-[320px] w-[330px] min-h-[600px] bg-white rounded-[9px] shadow-[0px_0px_6px_rgba(0,0,0,0.2)] m-4 md:m-8">
 
             <div className={`${!props.discont && 'invisible' } promo bg-[#e20000] w-[100%] h-[40px] p-2  rounded-t-[9px] flex items-center justify-center`}>
                 <h3 className="text-white font-extrabold text-[18px]">MÁS VENDIDO</h3>
@@ -33,7 +34,7 @@ const CardSolutions = (props:CardSolutionsProps):JSX.Element =>{
             </div>
 
             <div className="mensual w-[100%] h-[30px] flex items-center justify-center">
-                <p className="bg-[#dfdfdf] text-[#6e6e6e] pl-2 pr-2 rounded-[9px] text-[17px] font-semibold">Pago único</p>
+                <p className="bg-[#dfdfdf] text-[#6e6e6e] pl-2 pr-2 rounded-[9px] text-[17px] font-semibold">{props.typePayment !== undefined ? props.typePayment : 'Pago único'} </p>
             </div>
 
             <div className="btn w-[100%] h-[60px] p-2 flex items-center justify-center mt-4">

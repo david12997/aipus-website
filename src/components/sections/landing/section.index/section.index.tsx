@@ -28,13 +28,14 @@ const SectionIndex = ():JSX.Element => {
 
                 <div className="absolute top-[98%]  container-button w-[100%] flex justify-center md:justify-end">
                     <Button1
-                        text="Crear Proyecto"
+                        text="Cotizar Proyecto"
                         icon={<IconEnterProject width="30" height="30" fill="#ffffff" />}
                         width="290px"
                         height="60px"
                         color="white"
                         background="#E20000"
                         fontSize="20px"
+                        link="https://aipus.fillout.com/cotizar-proyecto?type=Proyecto%20a%20la%20medida"
                     />
                 </div>
                
@@ -72,13 +73,14 @@ const SectionIndex = ():JSX.Element => {
 
                     <div className="absolute top-[85%]  container-button w-[90%] flex justify-center md:justify-end ml-[9%]">
                         <Button1
-                            text="Crear Proyecto"
+                            text="Cotizar Proyecto"
                             icon={<IconEnterProject width="30" height="30" fill="#ffffff" />}
                             width="250px"
                             height="60px"
                             color="white"
                             background="#E20000"
                             fontSize="22px"
+                            link="https://aipus.fillout.com/cotizar-proyecto?type=Proyecto%20a%20la%20medida"
                             
                         />
                     </div>
